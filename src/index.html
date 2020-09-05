@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jojang Saver</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/slide.css" />
+    <link rel="stylesheet" href="./css/stylingField.css" />
+    <link rel="stylesheet" href="./css/presentation.css" />
+    <script src="./js/index.js" type="module"></script>
+    <style class="custom-style-global"></style>
+    <style class="custom-style"></style>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="app-title">MARCSS</div>
+      <div class="navbar-right-side">
+        <div class="dropdown">
+          <input type="button" class="import-btn navbar-btn">
+          <div class="dropdown-content upload">
+            <a class="dropdown-description">업로드</a>
+            <input type="file" id="upload-marcss" accept=".json" data-upload-type="marcss" hidden>
+            <label for="upload-marcss" class="dropdown-item">MARCSS(.json)</label>
+            <input type="file" id="upload-markdown" accept=".md" data-upload-type="markdown" hidden>
+            <label for="upload-markdown" class="dropdown-item">마크다운(.md)</label>
+            <input type="file" id="upload-style" accept=".json" data-upload-type="style" hidden>
+            <label for="upload-style" class="dropdown-item">스타일링(.json)</label>
+          </div>
+        </div>
+        <div class="dropdown">
+          <input type="button" class="export-btn navbar-btn">
+          <div class="dropdown-content download">
+            <a class="dropdown-description">다운로드</a>
+            <a data-download-type="marcss" href="#" class="dropdown-item">MARCSS(.json)</a>
+            <a data-download-type="markdown" href="#" class="dropdown-item">마크다운(.md)</a>
+            <a data-download-type="style" href="#" class="dropdown-item">스타일링(.json)</a>
+          </div>
+        </div>
+        <button class="slideshow-btn">슬라이드 쇼</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="input-part" data-part="input">
+        <div class="info-bar">
+          <div>슬라이드 <span class="current-slide-num">0</span>/<span class="slides-total">0</span></div>
+          <div class="styling">
+            <button class="start-styling-btn small-btn">슬라이드 CSS</button>
+          </div>
+        </div>
+        <div class="styling-field">
+          <a href="#" class="exit-btn"></a>
+          <h2 class="styling-header">
+            슬라이드 스타일 설정
+          </h2>
+          <hr />
+          <div class="styling-container">
+            <div class="row">
+              <label for="slide-select">설정할 슬라이드를 선택하세요: </label>
+              <select id="slide-select" class="slide-styling">
+                <option value="all">전체</option>
+              </select>
+            </div>
+            <div class="row save-style-section">
+              <label for="slide-css" class="slide-css-label"
+                >해당 슬라이드에 적용될 CSS 를 작성하세요</label
+              >
+              <textarea
+                id="slide-css"
+                class="slide-styling"
+                placeholder="아무런 셀렉터 없이 '{}' 안에 css 문법을 기입하면 해당 슬라이드 최상위 요소에 적용됩니다. 'h1 {}' 같이 셀렉터를 사용하면 슬라이드 내 해당 요소에 적용됩니다."
+              ></textarea>
+              <button class="save-styling-btn small-btn slide-styling">
+                저장
+              </button>
+            </div>
+          </div>
+        </div>
+        <textarea
+          class="markdown-input-field"
+          placeholder="마크다운을 지원하며 '---' 만 있는 줄을 기준으로 슬라이드가 구분됩니다."
+          spellcheck="false"
+        ></textarea>
+      </div>
+      <div class="output-part">
+        <div class="result-field">
+          <div class="slides-list"></div>
+        </div>
+      </div>
+    </main>
+
+    <div class="presentation-base">
+      <div class="presentation-controller-field">
+        <div class="presentation-controller-wrapper">
+          <div class="presentation-controller">
+            <button class="controller-btn" data-control="toPrev">이전</button>
+            <button class="controller-btn" data-control="toNext">다음</button>
+          </div>
+          <div class="presentation-info"></div>
+          <a href="#" class="exit-btn" data-control="exitController"></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

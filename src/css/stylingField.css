@@ -1,0 +1,61 @@
+.styling-field {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  background-color: #fff;
+  padding: 24px;
+  display: none;
+  overflow: auto;
+}
+
+.styling-header {
+  margin-top: 48px;
+  margin-bottom: 8px;
+}
+
+.styling-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  font-size: 18px;
+}
+
+.styling-container .row {
+  margin-bottom: 16px;
+  color: #222;
+}
+
+.slide-styling:focus {
+  outline: none;
+}
+
+#slide-select {
+  font-size: 1rem;
+  padding: 6px 10px;
+}
+
+.slide-css-description {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+#slide-css {
+  font-size: 1.2rem;
+  margin-top: 16px;
+  padding: 16px;
+  width: 100%;
+  min-height: 400px;
+  resize: none;
+}
+
+.save-style-section {
+  width: 95%;
+}
+
+.save-styling-btn {
+  display: block;
+  width: 100%;
+}

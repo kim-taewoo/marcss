@@ -1,0 +1,274 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  font-family: "D2Coding", sans-serif;
+}
+
+html, body {
+  color: #222;
+  height: 100vh;
+  background-color: #fff;
+  font-size: 16px;
+  overflow: hidden;
+  line-height: 1.1;
+}
+
+.navbar {
+  height: 63px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 2rem;
+  z-index: 22;
+  background-color: #222;
+  overflow: hidden;
+}
+
+.app-title {
+  font-size: 28px;
+  color: white;
+  user-select: none;
+}
+
+.navbar-right-side {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right-side div {
+  margin-right: 16px;
+}
+
+.navbar-btn {
+  border: none;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  outline: none;
+}
+
+.navbar-btn:hover {
+  opacity: .8;
+}
+
+.navbar-btn:focus {
+  outline: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #efefef;
+  min-width: 150px;
+  z-index: 1;
+}
+
+.dropdown-content label {
+  cursor: pointer;
+  padding: 12px 16px;
+  display: block;
+  text-align: left;
+  text-decoration: none;
+  color: #222;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  display: block;
+  text-align: left;
+  text-decoration: none;
+  color: #222;
+}
+
+.dropdown-content .dropdown-description {
+  color: #555;
+  padding: 10px 16px;
+  user-select: none;
+  border-bottom: 1px solid #abb0bf;
+  text-align: center;
+}
+
+.dropdown-content .dropdown-item:hover {
+  opacity: .6;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+input.import-btn {
+  background: url("../img/upload.png") no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+input.export-btn {
+  background: url("../img/download.png") no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.slideshow-btn {
+  background-color: #FFCD00;
+  columns: #222;
+  padding: 12px 16px 13px;
+  border: none;
+  cursor: pointer;
+}
+
+.slideshow-btn:hover {
+  opacity: .6;
+}
+
+.slideshow-btn:focus {
+  outline: none;
+}
+
+main {
+  display: flex;
+  position: absolute;
+  top: 63px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.input-part {
+  width: 45%;
+  height: 100%;
+  position: relative;
+}
+
+.output-part {
+  width: 55%;
+  height: 100%;
+  position: relative;
+  background-color: #555;
+}
+
+.info-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 1.5rem;
+  width: 100%;
+  height: 56px;
+  background-color: #fff;
+  border-bottom: 1px solid #abb0bf;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slides-num {
+  font-size: bold;
+  color: #555;
+}
+
+.small-btn {
+  border: none;
+  border-radius: 2px;
+  background-color: #ffcd00;
+  height: 36px;
+  padding: 2px 12px;
+  cursor: pointer;
+}
+
+.small-btn:hover {
+  opacity: .8;
+}
+
+.small-btn:focus {
+  outline: none;
+}
+
+.markdown-input-field {
+  height: calc(100% - 56px);
+  width: 100%;
+  padding: 24px;
+  margin: 56px 0;
+  font-size: 1.2em;
+  overflow: auto;
+  white-space: pre-wrap;
+  border: none;
+  resize: none;
+  outline: none;
+  box-shadow: none;
+  z-index: 1;
+}
+
+.result-field {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slides-list {
+  width: 100%;
+  height: calc(100% - 12px);
+  overflow: auto;
+  margin: 6px auto;
+  padding: 2rem;
+  position: relative;
+}
+
+.slides-list::-webkit-scrollbar {
+  width: 6px;
+  background-color: #555;
+}
+
+.slides-list::-webkit-scrollbar-thumb {
+  background-color: #FFCD00;
+  border-radius: 3px;
+}
+
+.exit-btn {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.5;
+}
+
+.exit-btn:hover {
+  opacity: 1;
+}
+
+.exit-btn::before,
+.exit-btn::after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 2px;
+  background-color: #222;
+}
+
+.exit-btn::before {
+  transform: rotate(45deg);
+}
+
+.exit-btn::after {
+  transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  .input-part {
+    width: 100%;
+    max-height: 60vh;
+    order: 2;
+  }
+
+  .output-part {
+    width: 100%;
+    max-height: 40vh;
+    border-bottom: 5px solid #555;
+  }
+}

@@ -1,0 +1,134 @@
+.presentation-base {
+  display: none;
+}
+
+.slides-root {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.presentation-base .slide-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0;
+  user-select: none;
+  border: none;
+  display: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.presentation-base .slide-wrapper.current {
+  display: block;
+}
+.presentation-base .slide-wrapper.next {
+  display: block;
+  opacity: 0;
+  transform: translateX(100%);
+}
+.presentation-base .slide-wrapper.prev {
+  display: block;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.presentation-base .slide-wrapper:focus {
+  outline: none;
+}
+
+.presentation-controller-field {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 13%;
+  z-index: 10;
+}
+
+.presentation-controller-wrapper {
+  width: 100%;
+  height: 100%;
+  padding-top: 16px;
+  position: relative;
+  display: none;
+  align-items: start;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.presentation-controller {
+  width: 80%;
+  height: 40px;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.controller-btn {
+  width: 45%;
+  height: 100%;
+  border: none;
+  border-radius: 20px;
+  background-color: #ffcd00;
+  cursor: pointer;
+}
+
+.controller-btn:hover {
+  opacity: 0.6;
+}
+
+.controller-btn:focus {
+  outline: none;
+}
+
+.slides-root {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  transition: all 0.6s ease-in-out;
+  transform: translateX(0%);
+}
+
+.presentation-base .slide-wrapper {
+  user-select: none;
+}
+
+.presentation-base .slide-wrapper:focus {
+  outline: none;
+}
+
+.presentation-info {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 32px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  color: #fff;
+}
+
+.presentation-base .exit-btn {
+  right: 50px;
+  top: -50px;
+}
+
+@keyframes animated-text {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
