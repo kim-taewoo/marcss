@@ -16,10 +16,10 @@ const activeSlideInitialState = {
 };
 
 const slidesStyleInitialState = {
-  "globalStyle": "",
-  "globalStyleRaw": "",
-  "slidesStyle": {},  
-  "slidesStyleRaw": {}
+  globalStyle: '',
+  globalStyleRaw: "",
+  slidesStyle: {},
+  slidesStyleRaw: {},
 };
 
 const slides = createStore(slidesInitialState, slidesReducer);

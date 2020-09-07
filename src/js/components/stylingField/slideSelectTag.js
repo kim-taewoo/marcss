@@ -27,7 +27,6 @@ export const attachSlidesStateObserverForTag = () => {
     // 슬라이드 개수가 변경되었을 경우 동기화 작업 진행
     syncStylingSelectTagOptions(slides.length);
   });
-  syncStylingSelectTagOptions(25)
 };
 
 export const attachActiveSlideStateObserver = () => {
