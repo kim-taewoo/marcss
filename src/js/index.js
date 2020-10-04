@@ -9,3 +9,4 @@ initSlidesCounter();
 initSlidesList();
 initMarkdownInputField();
 initStylingField();
+
